@@ -24,4 +24,18 @@ fun dayOne() {
     }
     //answer is 2742123
     println(sum)
+
+    //PartII
+    var sumTwo = 0
+    listOne.forEach { it ->
+        var occurs = 0
+        listTwo.forEach { fromTwo ->
+                if (fromTwo == it) {
+                    occurs += 1
+                }
+            }
+        var result = occurs * it
+        sumTwo += result
+    }
+    println(sumTwo)
 }
